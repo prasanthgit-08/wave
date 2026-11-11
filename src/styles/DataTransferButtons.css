@@ -1,0 +1,52 @@
+.pickerControllerButton .page-link {
+  padding: 0px;
+  padding-bottom: 5px;
+}
+
+.left-arrow-double span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  padding: 5px;
+  background: url("../assets/pagination/left-arrow-double.png");
+  background-size: 100%;
+  text-indent: -999em;
+  border-color: blue;
+}
+
+.right-arrow-double span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  padding: 5px;
+  background: url("../assets/pagination/right-arrow-double.png");
+  background-size: 100%;
+  text-indent: -999em;
+  border-color: blue;
+}
+
+.right-arrow-single span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  padding: 5px;
+  background: url("../assets/pagination/right-arrow-single.png");
+  background-size: 100%;
+  text-indent: -999em;
+  border-color: blue;
+}
+
+.left-arrow-single span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 20px;
+  padding: 5px;
+  background: url("../assets/pagination/left-arrow-single.png");
+  background-size: 100%;
+  text-indent: -999em;
+  border-color: blue;
+}

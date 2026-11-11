@@ -1,0 +1,7 @@
+.unitSelection table tr th {
+  white-space: nowrap !important;
+}
+
+.unitSelectionSearchFilter.zoomOut label {
+  font-size: 0.6rem !important;
+}

@@ -1,0 +1,164 @@
+.orderEntryHeight {
+  height: 798px;
+}
+
+.tabHeight {
+  height: 550px;
+}
+.customerRowHeight {
+  height: 738px;
+}
+.customerRowHeight table th {
+  background: #dadada;
+}
+.miscDeliveryHeight {
+  height: 700px;
+}
+.overWidthHeight {
+  height: 612px;
+}
+.driveByTableHeight {
+  height: 575px;
+}
+.driveByTableHeight table th {
+  background: #dadada;
+}
+.creditCardTable table th {
+  background: #dadada;
+}
+.plantNameTable {
+  height: 300px;
+}
+.plantNameTable table th {
+  background: #dadada;
+}
+.lastCol {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.textArea {
+}
+.buttonLabel {
+  background: #dadada;
+  border: 1px solid;
+  padding: 1px 3px !important;
+  cursor: pointer;
+}
+.orderTabs ul {
+  flex-wrap: nowrap !important;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.orderTabs:first-child::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.orderTabs li button {
+  font-size: 12px !important;
+  white-space: nowrap;
+}
+.orderLabel {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.selectContainer {
+  display: flex;
+}
+.selectMark {
+  width: 30px;
+  text-align: center;
+  border: 1px solid #212529;
+  border-radius: 4px;
+  background: #e9ecef;
+  margin-left: 10px;
+  padding-top: 2px;
+  cursor: pointer;
+}
+.lookupMagnifierIcon {
+  width: 35px;
+  text-align: center;
+  border: 1px solid #212529;
+  border-radius: 4px;
+  background: #e9ecef;
+  margin-left: 10px;
+  padding-top: 6px;
+  cursor: pointer;
+}
+.miscConatiner {
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  margin: 7px;
+}
+.orderForm {
+}
+
+.textRight {
+  text-align: right;
+}
+
+.borderRightOrderEntry {
+  border-right: 1px solid #ccc;
+}
+
+.pc-miler-btn {
+  top: 15px;
+  left: 15px;
+  z-index: 9999;
+}
+
+/* all media screen here */
+
+@media (max-width: 1264px) {
+  .orderLabel {
+    font-size: 10px !important;
+  }
+  .selectContainer select {
+    height: 20px !important;
+  }
+  .lookupMagnifierIcon {
+    padding-top: 4px;
+  }
+  .customerRowHeight {
+    height: 738px;
+  }
+  .orderEntryHeight {
+    height: 800px;
+  }
+  .selectMark {
+    height: 17px;
+    padding-top: 0px;
+  }
+  .orderForm {
+    height: 19px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .textArea {
+    height: 90px;
+  }
+  .customerRowHeight {
+    height: 738px;
+  }
+  .orderEntryHeight {
+    height: 800px;
+  }
+}
+
+@media (max-width: 1450px) {
+  .mainContainer {
+    overflow: auto;
+  }
+  .orderTabs {
+    min-width: 1450px;
+    overflow-x: hidden;
+  }
+
+  .miscDeliveryHeight,
+  .overWidthHeight {
+    height: 617px;
+  }
+}

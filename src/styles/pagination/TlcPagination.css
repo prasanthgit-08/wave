@@ -1,0 +1,115 @@
+.tripplearrow-up span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/pagination/prev-tripple.jpeg");
+  background-size: 100%;
+  text-indent: -999em;
+  border-color: blue;
+}
+.tripplearrow-down span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/pagination/next-tripple.jpeg");
+  background-size: 100%;
+  text-indent: -999em;
+  border-color: blue;
+}
+.first-page span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/pagination/first-page-button.png");
+  background-size: 100%;
+  text-indent: -999em;
+  border-color: blue;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.last-page span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/pagination/last-page-button.png");
+  background-size: 100%;
+  text-indent: -999em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.prev-page span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/pagination/prev-page.png");
+  background-size: 100%;
+  text-indent: -999em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.next-page span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/pagination/next-page.png");
+  background-size: 100%;
+  text-indent: -999em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.prev-set span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/pagination/prev-set.png");
+  background-size: 100%;
+  text-indent: -999em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.next-set span {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url("../../assets/pagination/next-set.png");
+  background-size: 100%;
+  text-indent: -999em;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tableSelected td {
+  background-color: #cff5ff;
+}
+
+.pagination .page-link {
+  padding: 5px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px !important;
+}
+
+.orphan td {
+  background-color: #f2ffcf;
+}
+
+.singles td {
+  background-color: #ffcff0;
+}
+
+.completeload td {
+  background-color: #ffdccf;
+}

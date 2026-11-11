@@ -1,0 +1,83 @@
+{
+  "name": "tlc_react",
+  "version": "1.0.0-190",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@hello-pangea/dnd": "^18.0.1",
+    "@hookform/resolvers": "^5.2.2",
+    "@reduxjs/toolkit": "^1.8.2",
+    "@tanstack/react-query": "^5.90.5",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.2",
+    "@tippyjs/react": "^4.2.6",
+    "axios": "^0.26.0",
+    "bootstrap": "^5.1.3",
+    "dwt": "^19.4.4",
+    "formik": "^2.2.9",
+    "i18next": "^21.8.10",
+    "js-big-decimal": "^2.2.0",
+    "js2xmlparser": "^5.0.0",
+    "moment": "^2.29.4",
+    "ncp": "^2.0.0",
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.1.2",
+    "react-datepicker": "^4.20.0",
+    "react-dom": "^18.3.1",
+    "react-dropzone": "^14.2.3",
+    "react-error-boundary": "^6.0.0",
+    "react-hook-form": "^7.62.0",
+    "react-hot-toast": "^2.2.0",
+    "react-i18next": "^9.0.10",
+    "react-radio-group": "^3.0.3",
+    "react-redux": "^8.0.2",
+    "react-router-dom": "^6.24.1",
+    "react-scripts": "^5.0.1",
+    "react-select": "^5.7.0",
+    "redux": "^4.2.0",
+    "tippy.js": "^6.3.7",
+    "web-vitals": "^2.1.0",
+    "yup": "^0.32.11",
+    "zod": "^4.1.9"
+  },
+  "scripts": {
+    "start": "ncp node_modules/dwt/dist public/dwt-resources && react-scripts start",
+    "build:Horizon": "env-cmd -f .env.production.Horizon npm run build && ncp node_modules/dwt/dist build/dwt-resources",
+    "build:Wave": "env-cmd -f .env.production.Wave npm run build && ncp node_modules/dwt/dist build/dwt-resources",
+    "build:uat:Horizon": "env-cmd -f .env.uat.Horizon npm run build && ncp node_modules/dwt/dist build/dwt-resources",
+    "build:uat:Wave": "env-cmd -f .env.uat.Wave npm run build && ncp node_modules/dwt/dist build/dwt-resources",
+    "build:prod:Horizon": "env-cmd -f .env.production.Horizon npm run build && ncp node_modules/dwt/dist build/dwt-resources",
+    "build:prod:Wave": "env-cmd -f .env.production.Wave npm run build && ncp node_modules/dwt/dist build/dwt-resources",
+    "build": "react-scripts build && ncp node_modules/dwt/dist build/dwt-resources",
+    "test": "ncp node_modules/dwt/dist public/dwt-resources && react-scripts test",
+    "eject": "react-scripts eject",
+    "format": "prettier --write ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "env-cmd": "^10.1.0",
+    "prettier": "^3.9.1",
+    "redux-devtools-extension": "^2.13.9"
+  }
+}

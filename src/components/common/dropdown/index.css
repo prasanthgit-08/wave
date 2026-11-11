@@ -1,0 +1,7 @@
+.placeholder-selection {
+  color: #bbbfc1 !important; /* Bootstrap's placeholder color */
+}
+
+option.placeholder-selection {
+  color: #000 !important; /* Ensure options are black */
+}

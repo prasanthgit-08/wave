@@ -1,0 +1,106 @@
+/* .order-confirmation-modal,
+.order-summary-modal {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.order-summary-modal {
+  margin-top: 20vh;
+}
+
+.orderConfirmationInfo {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.order-confirmation-modal .modal-dialog {
+  min-width: 80% !important;
+}
+
+.order-summary-modal .modal-dialog {
+  min-width: 650px !important;
+}
+@media (max-width: 650px) {
+  .order-summary-modal .modal-dialog {
+    min-width: calc(80vw - 50px) !important;
+  }
+}
+
+.order-summary-modal .heading {
+  font-weight: 500;
+  margin-top: 35px;
+}
+
+.order-summary-modal .checkIcon {
+  color: green;
+  margin-top: 35px;
+}
+
+.orderSummaryInfo {
+  font-size: 1rem;
+}
+
+.save-btn {
+  background: #64d464;
+}
+.save-btn:hover {
+  background: #64d464c7;
+  color: white;
+}
+
+.duplicateList {
+  width: 100%;
+  border-radius: 5px !important;
+  overflow-y: auto !important;
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+.duplicateListElement {
+  padding: 0.2rem 0.5rem;
+}
+.duplicateList li:hover {
+  background: #4d4d4d;
+  color: white;
+}
+
+.grey-text {
+  color: rgb(144, 143, 143);
+}
+
+.unitNumber {
+  font-weight: 700;
+  color: #400080;
+  background-color: #d7c5ea;
+  padding: 0.3rem 0.4rem;
+  border-radius: 5px;
+}
+.specialCode {
+  font-weight: 700;
+  color: #bd1b05;
+  background-color: #fdd3cd;
+  padding: 0.3rem 0.4rem;
+  border-radius: 5px;
+}
+.stockNumber {
+  font-weight: 700;
+  color: #050505;
+  background-color: #dbdbdb;
+  padding: 0.3rem 0.4rem;
+  border-radius: 5px;
+}
+.unitNumber {
+  font-weight: 700;
+  color: #400080;
+  background-color: #d7c5ea;
+  padding: 0.3rem 0.4rem;
+  border-radius: 5px;
+} */

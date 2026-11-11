@@ -1,0 +1,94 @@
+import React, { useEffect } from "react";
+import { useState } from "react";
+import toast from "react-hot-toast";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate, useParams } from "react-router-dom";
+import ModalComponent from "../../../../common/ModalComponent";
+import {
+  resetDriverDispatchHold,
+  setFormData,
+  setIsValidEntry,
+} from "../../../../../redux/DriverDispatchHoldSlice";
+
+const FormHeader = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { driverId, id } = useParams();
+
+  const viewDetail = useSelector((state) => state.driverDispatchHold.viewDetail);
+  const [closeShow, setCloseShow] = useState(false);
+  const isValidEntry = useSelector((state) => state.driverDispatchHold.isValidEntry);
+  const formData = useSelector((state) => state.driverDispatchHold.formData);
+  const driverDispatchHold = useSelector((state) => state.driverDispatchHold.driverDispatchHold);
+
+  const handleClose = () => {
+    // View mode
+    if (viewDetail) {
+      handleCloseYes();
+      return;
+    }
+    // Edit mode
+    if (hasChanges()) {
+      setCloseShow(true);
+    } else {
+      handleCloseYes();
+    }
+  };
+
+  const handleCloseNo = () => setCloseShow(false);
+  const handleCloseYes = () => {
+    dispatch(setIsValidEntry(false));
+    if (window.location.pathname === "/driverservice/driver-dispatchhold/" + driverId + "/" + id) {
+      navigate(`/driver-service-selection/${driverId}/form`);
+    } else {
+      navigate(`/driver-maintenance-add/${driverId}`);
+    }
+    toast.success("Page closed");
+    dispatch(setFormData(null));
+    dispatch(resetDriverDispatchHold());
+  };
+  const hasChanges = () => {
+    // If no original data is loaded, don't show popup
+    if (!formData || !driverDispatchHold) return false;
+
+    return (
+      (driverDispatchHold.hold || false) !== (formData.hold || false) ||
+      (driverDispatchHold.holdReason || "") !== (formData.holdReason || "") ||
+      (driverDispatchHold.holdDate || "") !== (formData.holdDate || "")
+    );
+  };
+
+  useEffect(() => {
+    if (!isValidEntry) {
+      if (window.location.pathname === "/driverservice/driver-dispatchhold/" + driverId + "/" + id) {
+        navigate(`/driver-service-selection/${driverId}/form`);
+      } else {
+        navigate(`/driver-maintenance-add/${driverId}`);
+      }
+    }
+  }, [isValidEntry]);
+
+  return (
+    <div>
+      <div className="d-flex align-items-center justify-content-end p-t-10 p-b-5 flex-wrap border-bottom border-dark border-2">
+        <button
+          className={`btn btn-secondary customButtonMediumWidth btn-sm m-l-5 m-r-5 m-b-5`}
+          onClick={handleClose}
+        >
+          Close
+        </button>
+      </div>
+
+      <ModalComponent
+        show={closeShow}
+        onHide={handleCloseNo}
+        title="Close Driver Dispatch Hold"
+        body="Please confirm you want to close the program without saving your changes"
+        handleYES={handleCloseYes}
+        handleNO={handleCloseNo}
+      />
+    </div>
+  );
+};
+
+export default FormHeader;

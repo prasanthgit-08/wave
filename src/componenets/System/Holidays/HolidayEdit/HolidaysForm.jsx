@@ -1,0 +1,19 @@
+import React from "react";
+import FormHeader from "./FormHeader";
+import FormFooter from "./FormFooter";
+import FormContent from "./FormContent";
+import styles from "../../../../styles/QuarterScreen.module.css";
+
+function HolidaysForm() {
+  return (
+    <div className="add-form-component p-0 customContainer">
+      <div className="border border-dark border-2 quarterScreenWidth" style={{ margin: "1px" }}>
+        <FormHeader styles={styles} />
+        <FormContent styles={styles} />
+        <FormFooter styles={styles} />
+      </div>
+    </div>
+  );
+}
+
+export default HolidaysForm;

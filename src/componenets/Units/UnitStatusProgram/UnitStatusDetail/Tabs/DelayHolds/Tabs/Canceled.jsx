@@ -1,0 +1,90 @@
+import React from "react";
+import { Col, Form } from "react-bootstrap";
+import DateInputField from "../../../../../../common/DateInputField";
+
+function Canceled({ data, activeSubTab }) {
+  const unitData = data?.data?.[0] || "";
+
+  return (
+    <div className="p-1 ps-2">
+      <Col xs={12}>
+        <Form.Group
+          className={`mt-4 form-group  align-items-center row  m-l-0 m-r-0 ms-0
+          `}
+        >
+          <Col sm={1} md={1} xs={1} className="p-2">
+            <Form.Label className={` customColFormLabel`} id="miscellaneousPickup">
+              Canceled{" "}
+            </Form.Label>
+          </Col>
+
+          <Col xs={1} className="p-0 h-25px d-flex align-items-center">
+            <input
+              type="checkbox"
+              checked={unitData?.Canceled || ""}
+              className="form-check-input  p-0"
+              disabled
+            />
+          </Col>
+        </Form.Group>
+        <Form.Group className="mt-2 align-items-center row   m-l-0 m-r-0 ms-0">
+          <Col sm={1} md={1} xs={1} className="p-2">
+            <Form.Label className={`customColFormLabel`}>Canceled Date</Form.Label>
+          </Col>
+          <Col xs={1} className="p-0" style={{ width: "90px" }}>
+            <DateInputField
+              date={unitData?.CanceledDate ? unitData.CanceledDate : ""}
+              min={""}
+              reduxSetDate={(value) => {}}
+              setIsDateValid={""}
+              className={""}
+              disabled
+            />
+          </Col>
+        </Form.Group>
+        <Form.Group
+          className={`mt-2 form-group  align-items-center  row  m-l-0 m-r-0 ms-0
+          `}
+        >
+          <Col sm={1} md={1} xs={1} className="p-2">
+            <Form.Label className={` customColFormLabel`} id="miscellaneousPickup">
+              Canceled By
+            </Form.Label>
+          </Col>
+
+          <Col xs={1} className="p-0" style={{ width: "250px" }}>
+            <input
+              className={`customFormControl 
+            `}
+              value={unitData.Name}
+              name=""
+              type="text"
+              autoComplete="off"
+              aria-autocomplete="list"
+              maxLength={30}
+              disabled
+            />
+          </Col>
+        </Form.Group>
+        <div className="mt-2">
+          <Form.Group
+            className={`mt-2 form-group  align-items-start  row  m-l-0 m-r-0 ms-0
+      `}
+          >
+            <Col sm={1} md={1} xs={1} className="p-2">
+              <Form.Label className={` customColFormLabel`} id="miscellaneousPickup">
+                Reason Canceled
+              </Form.Label>
+            </Col>
+
+            <Col xs={9} className="p-0 h">
+              <textarea rows={10} value={unitData.CanceledReason} className="w-100" disabled />
+            </Col>
+          </Form.Group>
+        </div>
+      </Col>
+    </div>
+  );
+}
+
+export default Canceled;
