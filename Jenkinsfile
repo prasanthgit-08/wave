@@ -27,11 +27,12 @@ pipeline {
 
         stage('Docker Compose') {
             steps {
-            bat '''
-                docker --version
-                docker-compose up -d --build
-           '''
-          }
-       }
+                bat '''
+                    docker --version
+                    docker-compose down
+                    docker-compose up -d --build
+                '''
+            }
+        }
     }
 }
