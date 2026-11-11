@@ -25,16 +25,13 @@ pipeline {
             }
         }
 
-        stage('Docker Build') {
+        stage('Docker Compose') {
             steps {
-                bat 'docker-compose build'
-            }
-        }
-
-        stage('Docker Deploy') {
-            steps {
-                bat 'docker-compose up -d'
-            }
-        }
+            bat '''
+                docker --version
+                docker-compose up -d --build
+           '''
+          }
+       }
     }
 }
