@@ -12,10 +12,16 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
+                bat 'npm ci'
+            }
+        }
+
+        stage('Build') {
+            steps {
                 bat '''
                     set "CI=false"
                     call npm run build:prod:Wave
-              '''
+                '''
             }
         }
 
