@@ -28,8 +28,7 @@ pipeline {
         stage('Docker Compose') {
             steps {
                 bat '''
-                    docker --version
-                    docker-compose down
+                    docker rm -f wave-frontend-container
                     docker-compose up -d --build
                 '''
             }
