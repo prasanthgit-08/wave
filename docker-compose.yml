@@ -1,0 +1,15 @@
+
+services:
+  wave-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    image: wave-frontend:1.0
+
+    container_name: wave-frontend-container
+
+    ports:
+      - "8090:80"
+
+    restart: unless-stopped
